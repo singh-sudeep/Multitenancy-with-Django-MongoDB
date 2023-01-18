@@ -16,9 +16,9 @@ follow the path C:\Windows\System32\Drivers\etc\.
 
 Open the host file using notepad or any other text editor and add our hosts as shown below:
 
-`127.0.0.1 school.local
+`127.0.0.1 school.local`
 
-127.0.0.1 nairobi.school.com`
+`127.0.0.1 nairobi.school.com`
 
 similarly for other databases add the hostnames.
 
@@ -28,6 +28,7 @@ Now, we can run the local server and test our multitenant sites:
 
 `python manage.py runserver school.local:8000
 `
+
 When the local host starts the server, you can access the tenant sites using the following URLs:
 
 
