@@ -3,7 +3,7 @@
 import os
 import sys
 
-from School.middleware import set_db_for_router #new
+from school.middleware import set_db_for_router #new
 
 if __name__ == "__main__":                  
     """Run administrative tasks."""

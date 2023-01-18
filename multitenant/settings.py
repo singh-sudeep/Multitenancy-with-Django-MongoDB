@@ -21,7 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'School',
+    'school',
 ]
 
 MIDDLEWARE = [
@@ -32,10 +32,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'School.middleware.SchoolMiddleware',
+    'school.middleware.SchoolMiddleware',
 ]
 
-DATABASE_ROUTERS = ['School.router.SchoolRouter']
+DATABASE_ROUTERS = ['school.router.SchoolRouter']
 
 ROOT_URLCONF = 'multitenant.urls'
 
