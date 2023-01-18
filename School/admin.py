@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Student
+from .models import Student, Tenant
 
 
 class adminStudent(admin.ModelAdmin):
@@ -13,4 +13,16 @@ class adminStudent(admin.ModelAdmin):
 
 
 admin.site.register(Student, adminStudent)
+
+
+class TenantAdmin(admin.ModelAdmin):
+    list_display = [
+        "id",
+        "name",
+        "schema_name",
+        "subdomain"
+    ]
+
+
+admin.site.register(Tenant, TenantAdmin)
 
