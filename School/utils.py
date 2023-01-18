@@ -1,3 +1,6 @@
+from .models import Tenant
+
+
 def hostname_from_the_request(request):
     return request.get_host().split(":")[0].lower()
 
@@ -9,8 +12,4 @@ def tenant_db_from_the_request(request):
 
 
 def get_tenants_map():
-    return {
-        "nairobi.school.com": "nairobi",
-        "joe.school.com": "joe",
-        "salina.school.com": 'salina',
-    }
+    return dict(Tenant.objects.values_list("subdomain", "schema_name"))

@@ -57,24 +57,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'multitenant.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'default',
-        },
-    'nairobi': {
-            'ENGINE': 'djongo',
-            'NAME': 'nairobi',
-            },
-    'joe': {
-        'ENGINE': 'djongo',
-        'NAME': 'joe',
-        },
-    'salina': {
-        'ENGINE': 'djongo',
-        'NAME': 'salina'
-    }
-}
+from .database import TENANT_DATABASES
+
+DATABASES = TENANT_DATABASES
 
 
 AUTH_PASSWORD_VALIDATORS = [

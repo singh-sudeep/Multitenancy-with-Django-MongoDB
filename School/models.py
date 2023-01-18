@@ -10,4 +10,9 @@ class Student(models.Model):
         return self.registration_no
 
 
+class Tenant(models.Model):
+    name = models.CharField(max_length=100)
+    schema_name = models.CharField(max_length=100)
+    subdomain = models.CharField(max_length=255, unique=True)
+
 
